@@ -16,16 +16,26 @@ namespace Moodify.Models
 					_allSongs = new List<Song>
 					{
 						new Song {
-							SongName="Shake it off",
-                            Emotion=Emotion.Sad,
-							NumberOfTimesPlayed=1,
-                            Genre=Genre.HipHop,
+							SongName="Let Her Go",
+                            Artist = "Passenger",
+                            Album = "All the Little Lights",
+                            Emotion = Emotion.Sad,
+                            Genre = Genre.NeoFolk,
 						},
 						new Song {
-							SongName="Shake it off 2",
-                            Emotion=Emotion.Happy,
-							NumberOfTimesPlayed=1,
+							SongName="Baby",
+                            Artist="Justin Bieber ft. Ludacris",
+                            Album="My World 2.0",
+                            Emotion=Emotion.Angry,
                             Genre=Genre.Pop,
+						},
+
+						new Song {
+							SongName="Happy",
+							Artist = "Pharrel Williams",
+                            Album = "G I R L",
+                            Emotion = Emotion.Happy,
+                            Genre = Genre.Pop,
 						}
 					};
 				}

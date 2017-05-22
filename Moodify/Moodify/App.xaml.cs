@@ -8,7 +8,8 @@ namespace Moodify
         {
             InitializeComponent();
 
-            MainPage = new MoodifyPage();
+            //MainPage = new MoodifyPage();
+            MainPage = new NavigationPage(new MoodifyPage());
         }
 
         protected override void OnStart()

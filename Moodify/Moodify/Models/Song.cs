@@ -4,9 +4,11 @@ namespace Moodify.Models
     public class Song
     {
 		public string SongName { get; set; }
+        public string Artist { get; set; }
+        public string Album { get; set; }
 		public string Emotion { get; set; }
-		public int NumberOfTimesPlayed { get; set; }
         public String Genre { get; set; }
+        public String Artwork { get; set; }
     }
 
 	public static class Emotion
@@ -21,6 +23,6 @@ namespace Moodify.Models
         public static string Pop = "Pop";
         public static string HipHop = "Hip Hop";
         public static string RnB = "R&B";
-
+        public static string NeoFolk = "Neo-folk";
 	}
 }
