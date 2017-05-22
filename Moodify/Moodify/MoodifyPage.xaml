@@ -16,7 +16,8 @@
                 GroupDisplayBinding="{Binding Title}"
                 GroupShortNameBinding="{Binding ShortName}"
                 IsGroupingEnabled="true"
-            ItemSelected="Handle_ItemSelected">
+                ItemSelected="Handle_ItemSelectedAsync"
+            >
             <ListView.GroupHeaderTemplate>
                 <DataTemplate>
                     <TextCell Text = "{Binding Title}" TextColor="Black"/>

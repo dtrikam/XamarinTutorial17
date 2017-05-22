@@ -7,15 +7,15 @@ namespace Moodify
 {
     public partial class MoodifyPage : ContentPage
     {
-        void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+        async System.Threading.Tasks.Task Handle_ItemSelectedAsync(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
         {
             var song = e.SelectedItem as Song;
-            DisplayAlert("Name of song?", song.SongName.ToString(), "OK");
 
-			
+            await DisplayAlert("Name of song", song.SongName.ToString(), "OK", "Cancel");
+
+            ((ListView)sender).SelectedItem = null;
 
         }
-
 
         public MoodifyPage()
         {
