@@ -14,7 +14,7 @@ namespace Moodify
 
 ;        }
 
-		async System.Threading.Tasks.Task Handle_ItemSelectedAsync(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+		async void Handle_ItemSelectedAsync(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
 		{
 			var song = e.SelectedItem as Song;
 

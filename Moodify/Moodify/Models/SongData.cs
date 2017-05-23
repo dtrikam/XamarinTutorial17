@@ -21,6 +21,7 @@ namespace Moodify.Models
                             Album = "All the Little Lights",
                             Emotion = Emotion.Sad,
                             Genre = Genre.NeoFolk,
+                            Artwork = "LetHerGo.png"
 						},
 						new Song {
 							SongName="Baby",
@@ -28,6 +29,7 @@ namespace Moodify.Models
                             Album="My World 2.0",
                             Emotion=Emotion.Angry,
                             Genre=Genre.Pop,
+                            Artwork ="Baby.jpg"
 						},
 
 						new Song {
@@ -36,6 +38,7 @@ namespace Moodify.Models
                             Album = "G I R L",
                             Emotion = Emotion.Happy,
                             Genre = Genre.Pop,
+                            Artwork = "Happy.jpg"
 						}
 					};
 				}

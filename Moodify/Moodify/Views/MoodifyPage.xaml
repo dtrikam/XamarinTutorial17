@@ -10,7 +10,12 @@
         </OnPlatform>
     </ContentPage.Padding>-->
     <ContentPage.Content>
-        <ListView ItemsSource="{x:Static local:SongData.AllSongsGrouped}" GroupDisplayBinding="{Binding Title}" GroupShortNameBinding="{Binding ShortName}" IsGroupingEnabled="true" ItemSelected="Handle_ItemSelectedAsync">
+        <ListView 
+            ItemsSource="{x:Static local:SongData.AllSongsGrouped}" 
+            GroupDisplayBinding="{Binding Title}" 
+            GroupShortNameBinding="{Binding ShortName}" 
+            IsGroupingEnabled="true" 
+            ItemSelected="Handle_ItemSelectedAsync">
             <ListView.GroupHeaderTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding Title}" TextColor="Black" />
