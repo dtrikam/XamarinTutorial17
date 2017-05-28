@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using Moodify.Models;
 using Xamarin.Forms;
 
-namespace Moodify.Views
+namespace Moodify
 {
     public partial class SongDetails : ContentPage
     {
         public SongDetails(Song song)
         {
             InitializeComponent();
-            BindingContext = song;
         }
     }
 }

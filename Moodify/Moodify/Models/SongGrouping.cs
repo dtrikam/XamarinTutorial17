@@ -1,7 +1,7 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 
-namespace Moodify.Models
+namespace Moodify
 {
 	// This is the "list of lists"
 	public class SongGrouping : List<Song>

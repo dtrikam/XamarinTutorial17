@@ -1,8 +1,8 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Moodify.Models
+namespace Moodify
 {
     public static class SongData
     {

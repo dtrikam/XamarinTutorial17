@@ -2,7 +2,7 @@
 <ContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    xmlns:local="clr-namespace:Moodify.Models" 
+    xmlns:local="clr-namespace:Moodify" 
     x:Class="Moodify.MoodifyPage"
     Title="Songs">
 <!--    <ContentPage.Padding>
@@ -15,7 +15,8 @@
             GroupDisplayBinding="{Binding Title}" 
             GroupShortNameBinding="{Binding ShortName}" 
             IsGroupingEnabled="true" 
-            ItemSelected="Handle_ItemSelectedAsync">
+            ItemSelected="Handle_ItemSelectedAsync"
+            ItemTapped ="Handle_ItemTapped">
             <ListView.GroupHeaderTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding Title}" TextColor="Black" />
@@ -26,12 +27,9 @@
                     <ViewCell>
                         <ViewCell.View>
                             <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding SongName, StringFormat='Song: {0:N}'}" HorizontalOptions="FillAndExpand" Margin="10,0,0,0"/>
-                                <StackLayout Orientation="Vertical" HorizontalOptions="End" Margin="0,0,0,0">
-                                    <Label Text="{Binding Artist, StringFormat='Artist: {0:N}'}" />
-                                </StackLayout>
+                                <Label Text="{Binding SongName, StringFormat='Song: {0:N}'}" HorizontalOptions="FillAndExpand" Margin="10,0,0,0" VerticalTextAlignment="Center"/>
+                                <Label Text="{Binding Artist, StringFormat='Artist: {0:N}'}" VerticalTextAlignment="Center" />
                             </StackLayout>
-                            <!-- <TextCell Text="{Binding SongName}" Detail="{Binding Genre}" />-->
                         </ViewCell.View>
                     </ViewCell>
                 </DataTemplate>

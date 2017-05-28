@@ -1,6 +1,6 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
-namespace Moodify.Models
+namespace Moodify
 {
 	public class ListViewGrouping<T> : List<T>
 	{

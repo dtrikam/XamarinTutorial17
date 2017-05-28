@@ -2,7 +2,7 @@
 using System.Globalization;
 using Xamarin.Forms;
 
-namespace Moodify.ValueConverters
+namespace Moodify
 {
     public class SongToImageConverter : IValueConverter
     {

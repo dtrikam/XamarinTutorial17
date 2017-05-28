@@ -1,5 +1,5 @@
-﻿using System;
-namespace Moodify.Models
+﻿﻿using System;
+namespace Moodify
 {
     public class Song
     {

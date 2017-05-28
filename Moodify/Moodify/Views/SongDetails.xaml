@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Moodify.Models" x:Class="Moodify.Views.SongDetails">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Moodify" x:Class="Moodify.SongDetails">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:SongToImageConverter x:Key="imageConvert" Assembly="Moodify.Images" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <Label Text="{Binding ImageName}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
-        </Label>
+        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+            <Label Text="{Binding SongName}" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="24" Margin="10,0,0,0">
+            </Label>
+            <Image Aspect="AspectFit" Source="{Binding Artwork, Converter={StaticResource imageConvert}}" HorizontalOptions="FillAndExpand">
+            </Image>
+            <Label Text="{Binding Emotion, StringFormat='Emotion: {0:N}'}" HorizontalTextAlignment="Center">
+            </Label>
+            <Label Text="{Binding Genre, StringFormat='Genre: {0:N}'}" HorizontalTextAlignment="Center">
+            </Label>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
