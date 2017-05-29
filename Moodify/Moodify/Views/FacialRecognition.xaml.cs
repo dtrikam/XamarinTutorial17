@@ -11,6 +11,7 @@ namespace Moodify
         {
             InitializeComponent();
             Title = "Facial Recognition";
+            Icon = "faceRec.png";
         }
     }
 }

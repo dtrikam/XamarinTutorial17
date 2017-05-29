@@ -10,6 +10,7 @@ namespace Moodify
         public MainPage()
         {
             InitializeComponent();
+            BarTextColor = Color.FromHex("#ff5733");
         }
     }
 }
