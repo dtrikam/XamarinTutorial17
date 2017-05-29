@@ -33,6 +33,7 @@ namespace Moodify
         {
             InitializeComponent();
             Title = "Songs";
+            Icon = "Songs.png";
 ;        }
 
     }

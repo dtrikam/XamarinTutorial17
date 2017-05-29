@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:Moodify" 
     x:Class="Moodify.MainPage">
-    <NavigationPage Title="Songs">
+    <NavigationPage Title="Songs" Icon="Songs.png">
         <x:Arguments>
             <local:MoodifyPage />
         </x:Arguments>
