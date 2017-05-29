@@ -6,9 +6,11 @@ namespace Moodify
 {
     public partial class SongDetails : ContentPage
     {
-        public SongDetails(Song song)
+        public SongDetails()
         {
-            InitializeComponent();
-        }
+			InitializeComponent();
+
+		}
+
     }
 }

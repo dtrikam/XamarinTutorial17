@@ -1,4 +1,4 @@
-﻿using Xamarin.Forms;
+﻿﻿using Xamarin.Forms;
 
 namespace Moodify
 {
@@ -9,7 +9,7 @@ namespace Moodify
             InitializeComponent();
 
             //MainPage = new MoodifyPage();
-            MainPage = new NavigationPage(new MoodifyPage());
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

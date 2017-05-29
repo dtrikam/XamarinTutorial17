@@ -1,4 +1,4 @@
-﻿﻿﻿using System;
+﻿﻿﻿﻿using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
 
@@ -20,9 +20,11 @@ namespace Moodify
 			var song = ((ListView)sender).SelectedItem as Song;
 			if (song != null)
 			{
-				var detailPage = new SongDetails(song);
-				detailPage.BindingContext = song;
-				await Navigation.PushAsync(detailPage);
+                var detailPage = new SongDetails()
+                {
+                    BindingContext = song
+                };
+                await Navigation.PushAsync(detailPage);
 			}
         }
 
@@ -30,7 +32,7 @@ namespace Moodify
         public MoodifyPage()
         {
             InitializeComponent();
-
+            Title = "Songs";
 ;        }
 
     }
