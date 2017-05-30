@@ -19,7 +19,7 @@ namespace Moodify
 							SongName="Let Her Go",
                             Artist = "Passenger",
                             Album = "All the Little Lights",
-                            Emotion = Emotion.Sad,
+                            Emotion = Emotion.Sadness,
                             Genre = Genre.NeoFolk,
                             Artwork = "LetHerGo.png"
 						},
@@ -27,7 +27,7 @@ namespace Moodify
 							SongName="Baby",
                             Artist="Justin Bieber ft. Ludacris",
                             Album="My World 2.0",
-                            Emotion=Emotion.Angry,
+                            Emotion=Emotion.Anger,
                             Genre=Genre.Pop,
                             Artwork ="Baby.jpg"
 						},
@@ -36,7 +36,7 @@ namespace Moodify
 							SongName="Happy",
 							Artist = "Pharrel Williams",
                             Album = "G I R L",
-                            Emotion = Emotion.Happy,
+                            Emotion = Emotion.Happiness,
                             Genre = Genre.Pop,
                             Artwork = "Happy.jpg"
 						}
@@ -54,14 +54,14 @@ namespace Moodify
 			{
 				if (_allSongsGrouped == null)
 				{
-					var sadGrouping = new SongGrouping("Sad", "S");
-                    sadGrouping.AddRange(SongData.AllSongs.Where(r => r.Emotion == Emotion.Sad));
+					var sadGrouping = new SongGrouping("Sadness", "S");
+                    sadGrouping.AddRange(SongData.AllSongs.Where(r => r.Emotion == Emotion.Sadness));
 
-					var happyGrouping = new SongGrouping("Happy", "H");
-                    happyGrouping.AddRange(SongData.AllSongs.Where(r => r.Emotion == Emotion.Happy));
+					var happyGrouping = new SongGrouping("Happiness", "H");
+                    happyGrouping.AddRange(SongData.AllSongs.Where(r => r.Emotion == Emotion.Happiness));
 
-					var angryGrouping = new SongGrouping("Angry", "A");
-					angryGrouping.AddRange(SongData.AllSongs.Where(r => r.Emotion == Emotion.Angry));
+					var angryGrouping = new SongGrouping("Anger", "A");
+                    angryGrouping.AddRange(SongData.AllSongs.Where(r => r.Emotion == Emotion.Anger));
 
 					_allSongsGrouped = new List<SongGrouping> {
 						sadGrouping,

@@ -17,7 +17,7 @@ namespace Moodify
 		{
 			InitializeComponent();
 			Title = "Facial Recognition";
-			//Icon = "faceRec.png";
+			Icon = "Songs.png";
 			emotionClient = new EmotionServiceClient(Constants.EmotionApiKey);
 		}
 

@@ -13,9 +13,14 @@ namespace Moodify
 
 	public static class Emotion
 	{
-		public static string Sad = "Sad";
-		public static string Happy = "Happy";
-		public static string Angry = "Angry";
+		public static string Sadness = "Sadness";
+		public static string Happiness = "Happiness";
+		public static string Anger = "Angry";
+        public static string Contempt = "Contempt";
+        public static string Disgust = "Disgust";
+        public static string Fear = "Fear";
+        public static string Neutral = "Neutral";
+        public static string Surprise = "Surprise";
 	}
 
 	public static class Genre
