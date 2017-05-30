@@ -7,6 +7,11 @@ namespace Moodify
 {
     public partial class FacialRecognition : ContentPage
     {
+        void Handle_Clicked(object sender, System.EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         public FacialRecognition()
         {
             InitializeComponent();
