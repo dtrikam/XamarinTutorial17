@@ -11,15 +11,14 @@ namespace Moodify
 {
     public partial class FacialRecognition : ContentPage
     {
-		//EmotionServiceClient emotionClient;
-		//MediaFile photo;
+		EmotionServiceClient emotionClient;
 
 		public FacialRecognition()
 		{
 			InitializeComponent();
 			Title = "Facial Recognition";
 			//Icon = "faceRec.png";
-			var emotionClient = new EmotionServiceClient(Constants.EmotionApiKey);
+			emotionClient = new EmotionServiceClient(Constants.EmotionApiKey);
 		}
 
         async void Handle_ClickedAsync(object sender, System.EventArgs e)
@@ -36,7 +35,31 @@ namespace Moodify
 
             image.Source = ImageSource.FromStream(() => file.GetStream());
 
+			// Recognize emotion
+			try
+			{
+
+				var emotionResults = await emotionClient.RecognizeAsync(file.GetStream());
+
+				var temp = emotionResults[0].Scores;
+
+				emotionResultLabel.Text = emotionResults.FirstOrDefault().Scores.ToRankedList().FirstOrDefault().Key;
+
+				image.Source = ImageSource.FromStream(() =>
+				{
+					var stream = file.GetStream();
+					file.Dispose();
+					return stream;
+				});
+			}
+			catch (Exception ex)
+			{
+				emotionResultLabel.Text = ex.Message;
+			}
+
         }
+
+
 
 
     }
